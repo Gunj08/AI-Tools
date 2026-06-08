@@ -11,8 +11,8 @@ const GoogleMockModal = ({ isOpen, onClose, onSelectAccount }) => {
 
   const mockAccounts = [
     {
-      name: 'Gunjan kumari Kushwaha',
-      email: 'gunjankumarikushwaha080@gmail.com',
+      name: 'Demo Admin',
+      email: 'admin@example.com',
       avatar: '', // Fallback initials
       tag: 'Owner / Admin'
     },

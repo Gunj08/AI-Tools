@@ -60,11 +60,11 @@ const seedDB = async () => {
     console.log('Seeding admin user...');
     const adminUser = await User.create({
       username: 'admin',
-      email: 'gunjankumarikushwaha080@gmail.com',
-      password: 'Utsav@123', // Will be hashed in model save hook
+      email: 'admin@example.com',
+      password: 'adminpassword123', // Will be hashed in model save hook
       role: 'admin'
     });
-    console.log(`Admin user created: email = ${adminUser.email}, password = Utsav@123`);
+    console.log(`Admin user created: email = ${adminUser.email}, password = adminpassword123`);
 
     // Seed Tools Data definition
     const toolsData = [
