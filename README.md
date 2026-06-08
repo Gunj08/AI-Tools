@@ -92,6 +92,7 @@ ai-tools-directory/
    DB_PASS=your_mysql_password
    DB_NAME=ai_tools_db
    DB_PORT=3306
+   DB_SSL=false
    ```
 4. Run the database seed script to populate initial categories and test tools:
    ```bash
