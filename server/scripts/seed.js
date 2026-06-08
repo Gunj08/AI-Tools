@@ -38,7 +38,9 @@ const seedDB = async () => {
     console.log('Connected to MySQL.');
 
     console.log('Syncing database (force: true) to clear tables...');
+    await sequelize.query('SET FOREIGN_KEY_CHECKS = 0');
     await sequelize.sync({ force: true });
+    await sequelize.query('SET FOREIGN_KEY_CHECKS = 1');
     console.log('Tables recreated successfully.');
 
     // Seed Categories
