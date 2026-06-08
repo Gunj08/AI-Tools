@@ -26,7 +26,8 @@ const seedDB = async () => {
       host: process.env.DB_HOST || '127.0.0.1',
       port: process.env.DB_PORT || 3306,
       user: process.env.DB_USER || 'root',
-      password: process.env.DB_PASS || ''
+      password: process.env.DB_PASS || '',
+      ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : undefined
     });
     await connection.query(`CREATE DATABASE IF NOT EXISTS \`${dbName}\`;`);
     await connection.end();
