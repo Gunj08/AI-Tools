@@ -89,7 +89,7 @@ ai-tools-directory/
    # MySQL Configuration
    DB_HOST=localhost
    DB_USER=root
-   DB_PASSWORD=your_mysql_password
+   DB_PASS=your_mysql_password
    DB_NAME=ai_tools_db
    DB_PORT=3306
    ```
