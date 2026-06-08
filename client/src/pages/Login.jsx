@@ -115,15 +115,12 @@ const Login = () => {
         </form>
 
         {/* Switch to signup */}
-        <div className="mt-8 text-center border-t border-white/5 pt-6 text-xs text-slate-400 space-y-4">
+        <div className="mt-8 text-center border-t border-white/5 pt-6 text-xs text-slate-400">
           <div>
             Don't have an account?{' '}
             <Link to="/register" className="font-semibold text-purple-400 hover:text-purple-300 transition-colors">
               Sign Up Here
             </Link>
-          </div>
-          <div className="text-[10px] text-slate-500">
-            Admin credentials: <span className="font-semibold text-purple-400/80">admin@example.com</span> / <span className="font-semibold text-purple-400/80">adminpassword123</span>
           </div>
         </div>
 
