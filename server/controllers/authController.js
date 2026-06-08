@@ -162,7 +162,7 @@ exports.googleLogin = async (req, res) => {
     }
 
     // Determine role: if it matches the owner's email, assign 'admin', else 'user'
-    const role = email === 'gunjankumarikushwaha080@gmail.com' ? 'admin' : 'user';
+    const role = email === 'admin@example.com' ? 'admin' : 'user';
 
     // Check if user already exists
     let user = await User.findOne({ where: { email } });

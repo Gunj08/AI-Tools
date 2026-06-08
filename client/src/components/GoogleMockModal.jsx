@@ -89,7 +89,7 @@ const GoogleMockModal = ({ isOpen, onClose, onSelectAccount }) => {
           <div className="space-y-3.5">
             {/* Accounts List */}
             {mockAccounts.map((account) => {
-              const isOwner = account.email === 'gunjankumarikushwaha080@gmail.com';
+              const isOwner = account.email === 'admin@example.com';
               return (
                 <button
                   key={account.email}
