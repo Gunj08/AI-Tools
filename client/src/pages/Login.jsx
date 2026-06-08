@@ -172,7 +172,7 @@ const Login = () => {
             </Link>
           </div>
           <div className="text-[10px] text-slate-500">
-            Admin credentials: <span className="font-semibold text-purple-400/80">gunjankumarikushwaha080@gmail.com</span> / <span className="font-semibold text-purple-400/80">Utsav@123</span>
+            Admin credentials: <span className="font-semibold text-purple-400/80">admin@example.com</span> / <span className="font-semibold text-purple-400/80">adminpassword123</span>
           </div>
         </div>
 
