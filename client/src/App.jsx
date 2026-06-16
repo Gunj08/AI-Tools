@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import { useAuth } from './context/AuthContext';
+import { Analytics } from '@vercel/analytics/react';
 
 // Public Pages
 import Home from './pages/Home';
@@ -54,23 +55,26 @@ function App() {
   if (loading) return <LoadingScreen />;
 
   return (
-    <Routes>
-      {/* Public Routes */}
-      <Route element={<PublicLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/category/:slug" element={<CategoryPage />} />
-        <Route path="/tool/:slug" element={<ToolDetail />} />
-        <Route path="/submit" element={<SubmitTool />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<ProtectedRoute><UserDashboard /></ProtectedRoute>} />
-      </Route>
+    <>
+      <Routes>
+        {/* Public Routes */}
+        <Route element={<PublicLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/category/:slug" element={<CategoryPage />} />
+          <Route path="/tool/:slug" element={<ToolDetail />} />
+          <Route path="/submit" element={<SubmitTool />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<ProtectedRoute><UserDashboard /></ProtectedRoute>} />
+        </Route>
 
 
 
-      {/* Redirects */}
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+        {/* Redirects */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+      <Analytics />
+    </>
   );
 }
 
